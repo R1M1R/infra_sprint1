@@ -1,21 +1,13 @@
-import os
-from distutils.util import strtobool
 from pathlib import Path
-
-from dotenv import load_dotenv
-
-
-load_dotenv()
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
 
-DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
+DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(', ')
-
+ALLOWED_HOSTS = ['158.160.12.158', '127.0.0.1', 'localhost', 'kittygramy.ddns.net']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -106,7 +98,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = '/var/www/infra_sprint1/media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000'
+]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated', 
