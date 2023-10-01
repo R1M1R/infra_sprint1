@@ -1,0 +1,4 @@
+IP: 158.160.12.158;
+name_kittygram: https://kittygramy.ddns.net;
+login: yc-user;
+password: JlOv3bJ-5z;
