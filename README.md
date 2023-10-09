@@ -6,8 +6,8 @@
 - [Python 3.10.12](https://www.python.org/)
 - [node.js 18.17.1](https://nodejs.org/en)
 - frontend:[React](https://react.dev/)
-- backend: [Django](https://www.djangoproject.com/)
-- [nginx](https://nginx.org/ru/)
+- backend: [Django 3.2.3](https://www.djangoproject.com/)
+- [nginx 1.18.0](https://nginx.org/ru/)
 - [Gunicorn 20.1.0](https://gunicorn.org/)
 - [certbot](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
 
@@ -205,48 +205,14 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 ```
 ## Примеры запросов
-GET /media
-```
-**Образец ответа**
-```
-<!doctype html><html lang="ru"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="manifest" href="/manifest.json"/><title>Kittygram</title><script defer="defer" src="/static/js/main.757add8e.js"></script><link href="/static/css/main.d4218ea3.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><div id="react-modals"></div></body></html>
-```
----
-```
-POST /media
-```
-**Образец ответа**
-```
-<!doctype html><html lang="ru"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="manifest" href="/manifest.json"/><title>Kittygram</title><script defer="defer" src="/static/js/main.757add8e.js"></script><link href="/static/css/main.d4218ea3.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><div id="react-modals"></div></body></html>
-```
----
-```
-GET /admin
-```
-**Образец ответа**
-```
-<html>
-<head><title>502 Bad Gateway</title></head>
-<body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>nginx/1.18.0 (Ubuntu)</center>
-</body>
-</html>
 
-```
----
-```
 GET /api
 ```
 **Образец ответа**
 ```
-<html>
-<head><title>502 Bad Gateway</title></head>
-<body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>nginx/1.18.0 (Ubuntu)</center>
-</body>
-</html>
+{
+    "tasks": "http://127.0.0.1:8000/api/tasks/?format=json"
+}
 
 ```
 
