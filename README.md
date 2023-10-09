@@ -210,10 +210,15 @@ GET /api
 ```
 **Образец ответа**
 ```
-{
-    "tasks": "http://127.0.0.1:8000/api/tasks/?format=json"
-}
+HTTP 401 Unauthorized
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+WWW-Authenticate: Token
 
+{
+    "detail": "Authentication credentials were not provided."
+}
 ```
 
 
